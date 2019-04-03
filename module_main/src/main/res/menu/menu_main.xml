@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.click.generalcomponent.MainActivity">
+    <item
+        android:id="@+id/navigation_find"
+        android:icon="@drawable/ic_find_black"
+        android:title="@string/title_fine" />
+
+    <item
+        android:id="@+id/navigation_new"
+        android:icon="@drawable/ic_news_black"
+        android:title="@string/title_new" />
+
+    <item
+        android:id="@+id/navigation_me"
+        android:icon="@drawable/ic_me_black"
+        android:title="@string/title_me" />
+</menu>

@@ -1,0 +1,6 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="main_name">主业务组件</string>
+    <string name="title_fine" tools:ignore="ResourceName">发现</string>
+    <string name="title_new" tools:ignore="ResourceName">新闻</string>
+    <string name="title_me" tools:ignore="ResourceName">我的</string>
+</resources>
