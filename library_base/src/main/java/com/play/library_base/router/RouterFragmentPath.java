@@ -12,7 +12,7 @@ public class RouterFragmentPath {
      */
     public static class Home {
         /*首页*/
-        public static final String HOME = "/home";
+        public static final String HOME = "home";
     }
 
     /**
@@ -20,9 +20,9 @@ public class RouterFragmentPath {
      */
     public static class Find {
         /*发现界面*/
-        public static final String FIND = "Fragment/Find";
+        public static final String FIND = "/Find";
         /*发现详情*/
-        public static final String PAGER_FIND = FIND +"/details";
+        public static final String PAGER_FIND = FIND +"/Find";
     }
 
     /**
@@ -30,9 +30,9 @@ public class RouterFragmentPath {
      */
     public static class News {
         /*新闻界面*/
-        public static final String NEWS = "Fragment/News";
+        public static final String NEWS = "/News";
         /*新闻详情*/
-        public static final String PAGER_NEWS = NEWS + "/details";
+        public static final String PAGER_NEWS = NEWS + "/News";
     }
 
     /**
@@ -40,8 +40,8 @@ public class RouterFragmentPath {
      */
     public static class User {
         /*用户界面*/
-        public static final String USER = "Fragment/user";
+        public static final String USER = "/user";
         /*用户详情*/
-        public static final String PAGER_USERDETAIL = USER + "/details";
+        public static final String PAGER_USERDETAIL = USER + "/user";
     }
 }

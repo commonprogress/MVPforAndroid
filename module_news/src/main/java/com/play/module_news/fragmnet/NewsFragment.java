@@ -17,7 +17,7 @@ import com.play.module_news.R;
  * @描述:
  */
 
-@Route(path = RouterFragmentPath.News.NEWS)
+@Route(path = RouterFragmentPath.News.PAGER_NEWS)
 public class NewsFragment extends Fragment {
     private View rootView;
 

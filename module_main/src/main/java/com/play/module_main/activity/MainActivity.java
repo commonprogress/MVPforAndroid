@@ -14,34 +14,65 @@ import com.play.library_base.router.RouterActivityPath;
 import com.play.library_base.router.RouterFragmentPath;
 import com.play.module_main.R;
 
+import java.util.HashMap;
+import java.util.List;
+
 @Route(path = RouterActivityPath.Main.PAGER_MAIN)
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView mNavigationView;
+    private HashMap<Integer, Fragment> mFragments;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initView();
+    }
+
+    private void initView() {
+        mFragments = new HashMap<>();
         mNavigationView = findViewById(R.id.navigation);
         mNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int i = item.getItemId();
-//                if (i == R.id.navigation_find) {// 发现
-//                    Fragment findFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.Find.FIND).navigation();
-//                    showFragment(findFragment);
-//
-//                } else if (i == R.id.navigation_new) {// 新闻
-//                    Fragment newFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.News.NEWS).navigation();
-//                    showFragment(newFragment);
-//
-//                } else if (i == R.id.navigation_me) {// 我的
-//                    Fragment meFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.User.USER).navigation();
-//                    showFragment(meFragment);
-//                }
+                switchTab(item.getItemId());
                 return true;
             }
         });
+        switchTab(0);
+    }
+
+    // 切换tab
+    private void switchTab(int id) {
+        Fragment currentFragment = null;
+        if (id == R.id.navigation_find) {// 发现
+
+            currentFragment = mFragments.get(R.id.navigation_find);
+            if (currentFragment == null) {
+                currentFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.Find.PAGER_FIND).navigation();
+                mFragments.put(R.id.navigation_find, currentFragment);
+            }
+            showFragment(currentFragment);
+        } else if (id == R.id.navigation_new) {// 新闻
+            currentFragment = mFragments.get(R.id.navigation_new);
+            if (currentFragment == null) {
+                currentFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.News.PAGER_NEWS).navigation();
+                mFragments.put(R.id.navigation_new, currentFragment);
+            }
+            showFragment(currentFragment);
+        } else if (id == R.id.navigation_me) {// 我的
+            currentFragment = mFragments.get(R.id.navigation_me);
+            if (currentFragment == null) {
+                currentFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.User.PAGER_USERDETAIL).navigation();
+                mFragments.put(R.id.navigation_me, currentFragment);
+            }
+            showFragment(currentFragment);
+        } else {// 默认
+            Fragment findFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.Find.PAGER_FIND).navigation();
+            showFragment(findFragment);
+        }
+
     }
 
     /**
@@ -52,6 +83,6 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.add(R.id.content_fragment, fragment).commitAllowingStateLoss();
+        ft.replace(R.id.content_fragment, fragment).commitAllowingStateLoss();
     }
 }

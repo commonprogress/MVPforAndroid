@@ -18,7 +18,7 @@ import com.play.module_find.R;
  * @描述:
  */
 
-@Route(path = RouterFragmentPath.Find.FIND)
+@Route(path = RouterFragmentPath.Find.PAGER_FIND)
 public class FindFragment extends Fragment {
     private View rootView;
 

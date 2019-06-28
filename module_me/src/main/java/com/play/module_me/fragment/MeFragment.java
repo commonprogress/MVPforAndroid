@@ -17,7 +17,7 @@ import com.play.module_me.R;
  * @描述:
  */
 
-@Route(path = RouterFragmentPath.User.USER)
+@Route(path = RouterFragmentPath.User.PAGER_USERDETAIL)
 public class MeFragment extends Fragment {
     private View rootView;
 
