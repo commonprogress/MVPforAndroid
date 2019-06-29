@@ -1,8 +1,8 @@
 package com.play.library_mvp.base.common;
 
-import android.app.Activity;
 import android.os.Bundle;
 
+import com.play.library_base.base.BaseContainerActivity;
 import com.play.library_mvp.base.interfaces.MvpPresenter;
 import com.play.library_mvp.base.interfaces.MvpView;
 import com.play.library_mvp.support.ActivityMvpDelegate;
@@ -14,7 +14,7 @@ import com.play.library_mvp.support.MvpDelegateCallback;
  * E-mail:824483029@qq.com
  */
 public class MvpBaseActivity <V extends MvpView, P extends MvpPresenter<V>>
-        extends Activity implements MvpView, MvpDelegateCallback<V, P> {
+        extends BaseContainerActivity implements MvpView, MvpDelegateCallback<V, P> {
 
     //目标对象
     protected ActivityMvpDelegate<V, P> mvpDelegate;
