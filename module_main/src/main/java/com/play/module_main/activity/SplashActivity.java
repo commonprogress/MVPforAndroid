@@ -5,7 +5,12 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class SplashActivity extends AppCompatActivity {
+import com.play.library_mvp.base.common.MvpBaseActivity;
+import com.play.module_main.contract.SplashContract;
+import com.play.module_main.presenter.SplashPresenter;
+
+public class SplashActivity extends MvpBaseActivity<SplashContract.View,
+        SplashContract.Presenter> implements SplashContract.View {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +23,16 @@ public class SplashActivity extends AppCompatActivity {
         }, 3 * 1000);
     }
 
+    @Override
+    public SplashContract.Presenter getPresenter() {
+        return new SplashPresenter();
+    }
 
     /**
      * 进入主页面
      */
     private void goMain() {
+
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }

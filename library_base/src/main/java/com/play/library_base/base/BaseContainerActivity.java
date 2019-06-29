@@ -1,85 +1,43 @@
 package com.play.library_base.base;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.view.WindowManager;
+import android.support.annotation.Nullable;
 
-import com.play.library_base.R;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
-import java.lang.ref.WeakReference;
 
 public class BaseContainerActivity extends RxAppCompatActivity {
-    private static final String FRAGMENT_TAG = "content_fragment_tag";
-    public static final String FRAGMENT = "fragment";
-    public static final String BUNDLE = "bundle";
-    protected WeakReference<Fragment> mFragment;
+    public BaseContainerActivity() {
+        super();
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_container);
-        FragmentManager fm = getSupportFragmentManager();
-        Fragment fragment = null;
-        if (savedInstanceState != null) {
-            fragment = fm.getFragment(savedInstanceState, FRAGMENT_TAG);
-        }
-        if (fragment == null) {
-            fragment = initFromIntent(getIntent());
-        }
-        FragmentTransaction trans = getSupportFragmentManager()
-                .beginTransaction();
-        trans.replace(R.id.content, fragment);
-        trans.commitAllowingStateLoss();
-        mFragment = new WeakReference<>(fragment);
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        getSupportFragmentManager().putFragment(outState, FRAGMENT_TAG, mFragment.get());
-    }
-
-    protected Fragment initFromIntent(Intent data) {
-        if (data == null) {
-            throw new RuntimeException(
-                    "you must provide a page info to display");
-        }
-        try {
-            String fragmentName = data.getStringExtra(FRAGMENT);
-            if (fragmentName == null || "".equals(fragmentName)) {
-                throw new IllegalArgumentException("can not find page fragmentName");
-            }
-            Class<?> fragmentClass = Class.forName(fragmentName);
-            Fragment fragment = (Fragment) fragmentClass.newInstance();
-            Bundle args = data.getBundleExtra(BUNDLE);
-            if (args != null) {
-                fragment.setArguments(args);
-            }
-            return fragment;
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
-        throw new RuntimeException("fragment initialization failed!");
+    protected void onStart() {
+        super.onStart();
     }
 
     @Override
-    public void onBackPressed() {
-        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.content);
-//        if (fragment instanceof BaseFragment) {
-//            if (!((BaseFragment) fragment).isBackPressed()) {
-//                super.onBackPressed();
-//            }
-//        } else {
-            super.onBackPressed();
-//        }
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }

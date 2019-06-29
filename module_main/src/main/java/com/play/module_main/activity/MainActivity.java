@@ -10,6 +10,7 @@ import android.view.MenuItem;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.play.library_base.base.BaseContainerActivity;
 import com.play.library_base.router.RouterActivityPath;
 import com.play.library_base.router.RouterFragmentPath;
 import com.play.module_main.R;
@@ -18,7 +19,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @Route(path = RouterActivityPath.Main.PAGER_MAIN)
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseContainerActivity {
     private BottomNavigationView mNavigationView;
     private HashMap<Integer, Fragment> mFragments;
 
