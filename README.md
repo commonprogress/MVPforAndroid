@@ -34,7 +34,7 @@ maven
 	<dependency>
 	    <groupId>com.github.Johnjson</groupId>
 	    <artifactId>MVPforAndroid</artifactId>
-	    <version>Tag</version>
+	    <version>v1.0.0</version>
 	</dependency>
 
 
