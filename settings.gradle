@@ -1,1 +1,1 @@
-include ':app', ':library_res', ':library_base',':module_main',  ':module_find',':module_news', ':module_me', ':library_net', ':library_mvp'
+include ':app', ':library_res', ':library_base',':module_main',  ':module_find',':module_news', ':module_me', ':library_net', ':library_mvp', ':module_login'

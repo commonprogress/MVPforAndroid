@@ -17,30 +17,13 @@ public class RouterActivityPath {
         public static final String PAGER_MAIN = MAIN +"/main";
     }
 
-//    /**
-//     * 发现组件
-//     */
-//    public static class Find {
-//        private static final String FIND = "/Find";
-//        /*发现界面*/
-//        public static final String PAGER_FIND = FIND +"/Find";
-//    }
-//
-//    /**
-//     * 新闻组件
-//     */
-//    public static class News {
-//        private static final String NEWS = "/News";
-//        /*登录界面*/
-//        public static final String PAGER_NEWS = NEWS + "/News";
-//    }
-//
-//    /**
-//     * 用户组件
-//     */
-//    public static class User {
-//        private static final String USER = "/user";
-//        /*用户详情*/
-//        public static final String PAGER_USERDETAIL = USER + "/User";
-//    }
+    /**
+     * 登陆业务组件
+     */
+    public static class Login {
+        private static final String LOGIN = "/login";
+        /*登陆业务界面*/
+        public static final String PAGER_LOGIN = LOGIN +"/login";
+    }
+
 }

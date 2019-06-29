@@ -11,20 +11,23 @@ import com.play.library_base.utils.LogUtils;
  */
 
 public class BaseModuleInit implements IModuleInit {
+
+    //ModuleLifecycleConfig  onInitAhead通过反射获取
     @Override
     public boolean onInitAhead(Application application) {
         //开启打印日志
         LogUtils.init(true);
         //初始化阿里路由框架
 //        if (BuildConfig.DEBUG) {
-            ARouter.openLog();     // 打印日志
-            ARouter.openDebug();   // 开启调试模式(如果在InstantRun模式下运行，必须开启调试模式！线上版本需要关闭,否则有安全风险)
+        ARouter.openLog();     // 打印日志
+        ARouter.openDebug();   // 开启调试模式(如果在InstantRun模式下运行，必须开启调试模式！线上版本需要关闭,否则有安全风险)
 //        }
         ARouter.init(application); // 尽可能早，推荐在Application中初始化
         LogUtils.e("基础层初始化 -- onInitAhead");
         return false;
     }
 
+    //ModuleLifecycleConfig  onInitLow 通过反射获取
     @Override
     public boolean onInitLow(Application application) {
         LogUtils.e("基础层初始化 -- onInitLow");

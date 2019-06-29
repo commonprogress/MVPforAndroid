@@ -7,13 +7,7 @@ package com.play.library_base.router;
  */
 
 public class RouterFragmentPath {
-    /**
-     * 首页组件
-     */
-    public static class Home {
-        /*首页*/
-        public static final String HOME = "home";
-    }
+
 
     /**
      * 发现组件
