@@ -21,7 +21,6 @@ public class SplashActivity extends MvpBaseActivity<SplashContract.View,
                 goMain();
             }
         }, 3 * 1000);
-
     }
 
     @Override
