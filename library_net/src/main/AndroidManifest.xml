@@ -1,2 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.play.library_net" />
+    package="com.play.library_net">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

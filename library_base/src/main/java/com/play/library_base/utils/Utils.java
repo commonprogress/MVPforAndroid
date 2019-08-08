@@ -2,7 +2,6 @@ package com.play.library_base.utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.support.annotation.NonNull;
 
 /**
  * Created by jhonjson on 2019/2/20
@@ -21,7 +20,7 @@ public class Utils {
      *
      * @param context 上下文
      */
-    public static void init(@NonNull final Context context) {
+    public static void init( final Context context) {
         Utils.context = context.getApplicationContext();
     }
 

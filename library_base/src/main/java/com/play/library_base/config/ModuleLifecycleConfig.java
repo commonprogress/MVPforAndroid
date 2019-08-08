@@ -1,7 +1,6 @@
 package com.play.library_base.config;
 
 import android.app.Application;
-import android.support.annotation.Nullable;
 
 import com.play.library_base.base.IModuleInit;
 
@@ -24,7 +23,7 @@ public class ModuleLifecycleConfig {
     private ModuleLifecycleConfig() {}
 
     //初始化组件-靠前
-    public void initModuleAhead(@Nullable Application application) {
+    public void initModuleAhead(Application application) {
         for (String moduleInitName : ModuleLifecycleReflexs.initModuleNames) {
             try {
                 Class<?> clazz = Class.forName(moduleInitName);
@@ -42,7 +41,7 @@ public class ModuleLifecycleConfig {
     }
 
     //初始化组件-靠后
-    public void initModuleLow(@Nullable Application application) {
+    public void initModuleLow(Application application) {
         for (String moduleInitName : ModuleLifecycleReflexs.initModuleNames) {
             try {
                 Class<?> clazz = Class.forName(moduleInitName);

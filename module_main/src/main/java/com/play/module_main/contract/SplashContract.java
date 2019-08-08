@@ -1,18 +1,18 @@
 package com.play.module_main.contract;
 
-import com.play.library_mvp.base.interfaces.MvpPresenter;
-import com.play.library_mvp.base.interfaces.MvpView;
+import com.play.library_mvp.base.common.BasePresenter;
+import com.play.library_mvp.base.common.BaseViewImp;
 
 public interface SplashContract {
 
-    interface View extends MvpView {
+    interface View extends BaseViewImp {
 
 
     }
 
-    interface Presenter extends MvpPresenter<View> {
+    abstract class Presenter extends BasePresenter<View> {
 
-        void getList();
+        public abstract void getList();
     }
 
 }

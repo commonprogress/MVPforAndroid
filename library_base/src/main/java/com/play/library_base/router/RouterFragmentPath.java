@@ -34,8 +34,8 @@ public class RouterFragmentPath {
      */
     public static class User {
         /*用户界面*/
-        public static final String USER = "/user";
+        public static final String USER = "/myuser";
         /*用户详情*/
-        public static final String PAGER_USERDETAIL = USER + "/user";
+        public static final String PAGER_USERDETAIL = USER + "/myuser";
     }
 }

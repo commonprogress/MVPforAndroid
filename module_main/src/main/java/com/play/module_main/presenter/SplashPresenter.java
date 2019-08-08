@@ -1,19 +1,18 @@
 package com.play.module_main.presenter;
 
+import android.content.Context;
 import android.util.Log;
 
-import com.play.library_mvp.base.common.MvpBasePresenter;
 import com.play.module_main.contract.SplashContract;
 
-public class SplashPresenter extends MvpBasePresenter<SplashContract.View>
-        implements SplashContract.Presenter {
+public class SplashPresenter extends SplashContract.Presenter {
 
+    private Context context;
 
-    @Override
-    public void attachView(SplashContract.View view) {
-        super.attachView(view);
-
+    public SplashPresenter(Context context) {
+        this.context = context;
     }
+
 
     @Override
     public void getList() {

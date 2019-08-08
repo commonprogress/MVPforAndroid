@@ -2,18 +2,19 @@ package com.play.library_base.base;
 
 import android.app.Activity;
 import android.app.Application;
-import android.support.annotation.NonNull;
+import android.content.Context;
 import android.os.Bundle;
 
 import com.play.library_base.utils.Utils;
 
 public class BaseApplication extends Application {
     private static Application sInstance;
-
+    private Context context;
     @Override
     public void onCreate() {
         super.onCreate();
         setApplication(this);
+        context = this;
     }
 
     /**
@@ -21,7 +22,7 @@ public class BaseApplication extends Application {
      *
      * @param application
      */
-    public static synchronized void setApplication(@NonNull Application application) {
+    public static synchronized void setApplication(Application application) {
         sInstance = application;
         //初始化工具类
         Utils.init(application);
@@ -68,5 +69,9 @@ public class BaseApplication extends Application {
             throw new NullPointerException("please inherit BaseApplication or call setApplication.");
         }
         return sInstance;
+    }
+
+    public Context getContext() {
+        return context;
     }
 }

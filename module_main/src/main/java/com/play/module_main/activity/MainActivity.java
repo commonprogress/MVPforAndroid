@@ -1,33 +1,45 @@
 package com.play.module_main.activity;
 
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.play.library_base.base.BaseContainerActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.play.library_base.router.RouterActivityPath;
 import com.play.library_base.router.RouterFragmentPath;
+import com.play.library_mvp.base.common.BaseActivity;
+import com.play.library_mvp.base.common.BasePresenter;
+import com.play.library_mvp.base.common.BaseViewImp;
 import com.play.module_main.R;
 
 import java.util.HashMap;
-import java.util.List;
 
 @Route(path = RouterActivityPath.Main.PAGER_MAIN)
-public class MainActivity extends BaseContainerActivity {
+public class MainActivity extends BaseActivity {
     private BottomNavigationView mNavigationView;
     private HashMap<Integer, Fragment> mFragments;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public int getLayoutId() {
+        return R.layout.activity_main;
+    }
 
+    @Override
+    public BasePresenter createPresenter() {
+        return null;
+    }
+
+    @Override
+    public BaseViewImp createView() {
+        return null;
+    }
+
+    @Override
+    public void init() {
         initView();
     }
 
@@ -36,7 +48,7 @@ public class MainActivity extends BaseContainerActivity {
         mNavigationView = findViewById(R.id.navigation);
         mNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            public boolean onNavigationItemSelected(MenuItem item) {
                 switchTab(item.getItemId());
                 return true;
             }
