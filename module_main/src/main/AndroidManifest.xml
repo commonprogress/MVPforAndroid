@@ -5,7 +5,6 @@
     <application>
         <!--在自己组件中注册Activity-->
         <activity android:name=".activity.MainActivity"/>
-        <activity android:name=".activity.LoginActivity"/>
     </application>
 
 </manifest>

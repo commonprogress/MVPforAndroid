@@ -1,5 +1,6 @@
 package com.play.module_main.activity;
 
+import android.util.Log;
 import android.view.MenuItem;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +11,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.play.library_base.router.RouterActivityPath;
 import com.play.library_base.router.RouterFragmentPath;
+import com.play.library_base.utils.SharePreUtils;
 import com.play.library_mvp.base.common.BaseActivity;
 import com.play.library_mvp.base.common.BasePresenter;
 import com.play.library_mvp.base.common.BaseViewImp;
@@ -53,6 +55,8 @@ public class MainActivity extends BaseActivity {
             }
         });
         switchTab(0);
+
+        Log.e("userid", "userid  " + SharePreUtils.getInteger("userid", 0));
     }
 
     @Override

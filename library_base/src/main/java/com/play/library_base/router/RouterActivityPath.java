@@ -24,6 +24,9 @@ public class RouterActivityPath {
         private static final String LOGIN = "/login";
         /*登陆业务界面*/
         public static final String PAGER_LOGIN = LOGIN +"/login";
+
+        /*注册业务界面*/
+        public static final String PAGER_REGISTER = LOGIN +"/Register";
     }
 
 }

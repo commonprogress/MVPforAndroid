@@ -6,6 +6,7 @@
     android:orientation="vertical"
     tools:ignore="ResourceName">
 
+
     <ImageView
         android:id="@+id/ivPic"
         android:layout_width="wrap_content"
@@ -15,38 +16,48 @@
         android:src="@mipmap/ic_launcher" />
 
     <com.play.library_base.view.ClearEditText
-        android:id="@+id/cetName"
+        android:id="@+id/cetName1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ivPic"
-        android:hint="请输入账号"
         android:layout_marginLeft="@dimen/dimen_20_dp"
-        android:layout_marginTop="@dimen/dimen_48_dp"
-        android:layout_marginRight="@dimen/dimen_20_dp" />
+        android:layout_marginTop="48dp"
+        android:layout_marginRight="@dimen/dimen_20_dp"
+        android:hint="请输入账号" />
 
 
     <com.play.library_base.view.ClearEditText
-        android:id="@+id/cetPsd"
+        android:id="@+id/cetPsd1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cetName"
-        android:hint="请输入密码"
+        android:layout_below="@+id/cetName1"
         android:layout_marginLeft="@dimen/dimen_20_dp"
         android:layout_marginTop="@dimen/dimen_20_dp"
-        android:layout_marginRight="@dimen/dimen_20_dp" />
+        android:layout_marginRight="@dimen/dimen_20_dp"
+        android:hint="请输入密码" />
+
+    <com.play.library_base.view.ClearEditText
+        android:id="@+id/cetPsd2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cetPsd1"
+        android:layout_marginLeft="@dimen/dimen_20_dp"
+        android:layout_marginTop="@dimen/dimen_20_dp"
+        android:layout_marginRight="@dimen/dimen_20_dp"
+        android:hint="请再次输入密码" />
 
     <TextView
-        android:id="@+id/tvLogin"
+        android:id="@+id/tvLogin1"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_below="@+id/cetPsd"
-        android:text="登录"
-        android:gravity="center"
-        android:textSize="18dp"
+        android:layout_below="@+id/cetPsd2"
         android:layout_marginLeft="@dimen/dimen_20_dp"
         android:layout_marginTop="40dp"
         android:layout_marginRight="@dimen/dimen_20_dp"
-        android:background="#6DD6DE" />
+        android:background="#6DD6DE"
+        android:gravity="center"
+        android:text="注册"
+        android:textSize="18dp" />
 
 
 </RelativeLayout>
