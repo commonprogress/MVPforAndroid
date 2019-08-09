@@ -17,11 +17,6 @@ ext {
     //support配置
     support = [
             "constraint-layout"       : "1.0.0-beta2",
-            'support-v4'              : "com.android.support:support-v4:${versions["support-version"]}",
-            'appcompat-v7'            : "com.android.support:appcompat-v7:${versions["support-version"]}",
-            'recyclerview-v7'         : "com.android.support:recyclerview-v7:${versions["support-version"]}",
-            'support-v13'             : "com.android.support:support-v13:${versions["support-version"]}",
-            'support-fragment'        : "com.android.support:support-fragment:${versions["support-version"]}",
             'design'                  : "com.android.support:design:${versions["support-version"]}",
             'animated-vector-drawable': "com.android.support:animated-vector-drawable:${versions["support-version"]}",
             'junit'                   : "junit:junit:${versions["junit-version"]}",
@@ -47,8 +42,9 @@ ext {
             "logging-interceptor"    : "com.squareup.okhttp3:logging-interceptor:3.11.0",
             "converter-gson"         : "com.squareup.retrofit2:converter-gson:2.4.0",
             //glide图片加载
-            "glide"                 : "com.github.bumptech.glide:glide:4.8.0",
-            "glide-compiler"        : "com.github.bumptech.glide:compiler:4.8.0",
+            "glide"                 : "com.github.bumptech.glide:glide:4.9.0",
+            "glide-compiler"        : "com.github.bumptech.glide:compiler:4.9.0",
+            "glide-annotations"        : "com.github.bumptech.glide:annotations:4.9.0",
             //json解析
             "gson"                  : "com.google.code.gson:gson:2.8.5",
             //阿里
@@ -56,6 +52,7 @@ ext {
             //阿里路由框架
             "arouter-api"           : "com.alibaba:arouter-api:1.4.1",
             "arouter-compiler"      : "com.alibaba:arouter-compiler:1.2.2",
+            'androidx-annotation'     : "androidx.annotation:annotation:1.0.0",
     ]
 }
 

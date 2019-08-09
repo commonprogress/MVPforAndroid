@@ -9,6 +9,7 @@ android {
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
     }
+
     sourceSets {
         main {
             jniLibs.srcDirs = ['libs']
@@ -30,6 +31,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
 }
 
 dependencies {
@@ -40,4 +46,10 @@ dependencies {
     api rootProject.ext.dependencies["arouter-api"]
 
     api rootProject.ext.dependencies["rxlifecycle-components"]
+    //阿里路由框架
+    api rootProject.ext.dependencies["glide"]
+    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+    annotationProcessor rootProject.ext.dependencies["androidx-annotation"]
+    api rootProject.ext.dependencies["glide-annotations"]
+    api rootProject.ext.dependencies["okhttp"]
 }

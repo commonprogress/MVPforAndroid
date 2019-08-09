@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.play.library_base" />
+    package="com.play.library_base">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    //它可以监听用户的连接状态并在用户重新连接到网络时重启之前失败的请求
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    //用于硬盘缓存和读取
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+</manifest>
