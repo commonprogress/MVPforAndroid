@@ -7,12 +7,11 @@ public interface SplashContract {
 
     interface View extends BaseViewImp {
 
-
     }
 
     abstract class Presenter extends BasePresenter<View> {
 
-        public abstract void getList();
+        public abstract void geSplashData();
     }
 
 }

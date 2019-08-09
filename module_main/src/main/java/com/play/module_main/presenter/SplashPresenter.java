@@ -16,7 +16,7 @@ public class SplashPresenter extends SplashContract.Presenter {
 
 
     @Override
-    public void getList() {
+    public void geSplashData() {
 
         Log.e("getList", "getList 请求数据  getList");
     }
