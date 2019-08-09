@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lce_content_view_animation_translate_y">40dp</dimen>
+
+    <dimen name="dimen_1_dp">1dp</dimen>
+    <dimen name="dimen_2_dp">2dp</dimen>
+    <dimen name="dimen_5_dp">5dp</dimen>
+    <dimen name="dimen_6_dp">6dp</dimen>
+    <dimen name="dimen_8_dp">8dp</dimen>
+    <dimen name="dimen_10_dp">10dp</dimen>
+    <dimen name="dimen_12_dp">12dp</dimen>
+    <dimen name="dimen_14_dp">14dp</dimen>
+    <dimen name="dimen_15_dp">15dp</dimen>
+    <dimen name="dimen_16_dp">16dp</dimen>
+    <dimen name="dimen_17_dp">17dp</dimen>
+    <dimen name="dimen_18_dp">18dp</dimen>
+    <dimen name="dimen_19_dp">19dp</dimen>
+    <dimen name="dimen_20_dp">20dp</dimen>
+    <dimen name="dimen_48_dp">48dp</dimen>
+    <dimen name="dimen_108_dp">108dp</dimen>
+    <dimen name="dimen_148_dp">148dp</dimen>
+    <dimen name="dimen_248_dp">248dp</dimen>
+    <dimen name="dimen_288_dp">288dp</dimen>
+
+    <dimen name="main_tab_line_height">@dimen/dimen_1_dp</dimen>
+    <dimen name="main_tab_height">@dimen/dimen_48_dp</dimen>
+
+    <dimen name="navigation_height">46dp</dimen>
+    <dimen name="text_size_12_sp">12sp</dimen>
+    <dimen name="essence_item_name_size">14sp</dimen>
+
+
+</resources>

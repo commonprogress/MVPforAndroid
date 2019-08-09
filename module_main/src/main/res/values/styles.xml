@@ -8,7 +8,4 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="AppTheme.Start" tools:ignore="ResourceName">
-        <item name="android:windowBackground">@mipmap/icon_splash</item>
-    </style>
 </resources>

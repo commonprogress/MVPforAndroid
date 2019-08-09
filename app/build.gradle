@@ -85,8 +85,6 @@ dependencies {
         implementation project(':module_news')
         //我的模块
         implementation project(':module_me')
-        //登陆模块
-        implementation project(':module_login')
 
     }
 }

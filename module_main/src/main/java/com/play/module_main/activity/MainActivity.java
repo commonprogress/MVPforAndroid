@@ -55,6 +55,11 @@ public class MainActivity extends BaseActivity {
         switchTab(0);
     }
 
+    @Override
+    public boolean isOpenImmersive() {
+        return true;
+    }
+
     // 切换tab
     private void switchTab(int id) {
         Fragment currentFragment = null;

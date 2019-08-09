@@ -5,16 +5,21 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
 
+import com.play.library_base.moduleinterface.IModuleMaster;
+import com.play.library_base.moduleinterface.ModuleMaster;
+import com.play.library_base.moduleinterface.ModuleNativeModule;
 import com.play.library_base.utils.Utils;
 
 public class BaseApplication extends Application {
     private static Application sInstance;
     private Context context;
+
     @Override
     public void onCreate() {
         super.onCreate();
         setApplication(this);
         context = this;
+//        ModuleMaster.getInstance().setModuleMaster(this);
     }
 
     /**
@@ -26,6 +31,7 @@ public class BaseApplication extends Application {
         sInstance = application;
         //初始化工具类
         Utils.init(application);
+
         //注册监听每个activity的生命周期,便于堆栈式管理
         application.registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
 
@@ -74,4 +80,16 @@ public class BaseApplication extends Application {
     public Context getContext() {
         return context;
     }
+
+
+//    ModuleNativeModule moduleNativeModule;
+//
+//    @Override
+//    public ModuleNativeModule getModuleNativeModule() {
+//
+//        if (null == moduleNativeModule) {
+//            moduleNativeModule = new ModuleNativeModule();
+//        }
+//        return moduleNativeModule;
+//    }
 }

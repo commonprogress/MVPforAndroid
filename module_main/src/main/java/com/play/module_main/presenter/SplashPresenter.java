@@ -5,6 +5,7 @@ import android.util.Log;
 
 import com.play.module_main.contract.SplashContract;
 
+
 public class SplashPresenter extends SplashContract.Presenter {
 
     private Context context;

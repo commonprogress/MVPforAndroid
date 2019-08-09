@@ -2,7 +2,6 @@ package com.play.module_main.activity;
 
 import android.content.Intent;
 import android.os.Handler;
-import android.os.Bundle;
 
 import com.play.library_mvp.base.common.BaseActivity;
 import com.play.module_main.R;
@@ -16,6 +15,9 @@ public class SplashActivity extends BaseActivity<SplashContract.View,
     public int getLayoutId() {
         return R.layout.activity_splash;
     }
+
+
+
 
     @Override
     public SplashContract.Presenter createPresenter() {
@@ -43,7 +45,7 @@ public class SplashActivity extends BaseActivity<SplashContract.View,
      */
     private void goMain() {
 
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, LoginActivity.class));
         finish();
     }
 
