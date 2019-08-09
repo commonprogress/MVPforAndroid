@@ -52,7 +52,7 @@ gradle
 	
 	
 	dependencies {
-	        implementation 'com.github.Johnjson:MVPforAndroid:v1.0.0'
+	        implementation 'com.github.Johnjson:MVPforAndroid:v1.1.0'
 	}
 
 
