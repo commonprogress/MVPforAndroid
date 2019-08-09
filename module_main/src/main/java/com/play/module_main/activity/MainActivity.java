@@ -1,6 +1,5 @@
 package com.play.module_main.activity;
 
-import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.fragment.app.Fragment;

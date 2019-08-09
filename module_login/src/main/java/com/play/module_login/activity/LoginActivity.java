@@ -5,9 +5,12 @@ import android.view.View;
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.play.library_base.utils.ToastUtils;
 import com.play.library_mvp.base.common.BaseActivity;
 import com.play.module_login.R;
 import com.play.library_base.router.RouterActivityPath;
+import com.play.module_login.bean.LoginBean;
+import com.play.module_login.bean.RegisterBean;
 import com.play.module_login.contract.LoginContract;
 import com.play.module_login.presenter.LoginPresenter;
 
@@ -49,5 +52,36 @@ public class LoginActivity extends BaseActivity<LoginContract.View, LoginContrac
                 getPresenter().register("jhonjson12345", "qs110134", "qs110134");
             }
         });
+    }
+
+    @Override
+    public void showLoading() {
+
+    }
+
+    @Override
+    public void hideLoading() {
+
+    }
+
+    @Override
+    public void backRegisterSuc(RegisterBean mRegisterBean) {
+
+    }
+
+    @Override
+    public void backLoginSuc(LoginBean mLoginBean) {
+
+    }
+
+    @Override
+    public void backRegisterFail(String msg) {
+        ToastUtils.showToast(this, msg);
+
+    }
+
+    @Override
+    public void backLoginFail(String msg) {
+        ToastUtils.showToast(this, msg);
     }
 }

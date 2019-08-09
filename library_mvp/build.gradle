@@ -38,4 +38,5 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api rootProject.ext.support["support-v4"]
     api project(':library_base')
+    api project(':library_net')
 }

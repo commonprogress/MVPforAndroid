@@ -46,4 +46,14 @@ public class SplashActivity extends BaseActivity<SplashContract.View,
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }
+
+    @Override
+    public void showLoading() {
+
+    }
+
+    @Override
+    public void hideLoading() {
+
+    }
 }

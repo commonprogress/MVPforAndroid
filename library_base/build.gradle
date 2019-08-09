@@ -34,15 +34,10 @@ android {
 
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
-    //公用的support相关库在base中依赖
-    api rootProject.ext.support["design"]
-    api rootProject.ext.support["appcompat-v7"]
     //公用资源在base中依赖
     api project(':library_res')
     //阿里路由框架
     api rootProject.ext.dependencies["arouter-api"]
 
-    api(rootProject.ext.dependencies["rxlifecycle-components"]) {
-        exclude group: 'com.android.support'
-    }
+    api rootProject.ext.dependencies["rxlifecycle-components"]
 }

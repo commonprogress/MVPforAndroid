@@ -35,5 +35,4 @@ android {
 
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
-    api rootProject.ext.support["appcompat-v7"]
 }
