@@ -75,7 +75,7 @@ public class MainActivity extends BaseActivity {
                 mFragments.put(R.id.navigation_find, currentFragment);
             }
             showFragment(currentFragment);
-        } else if (id == R.id.navigation_new) {// 新闻
+        } else if (id == R.id.navigation_new) {// 技能
             currentFragment = mFragments.get(R.id.navigation_new);
             if (currentFragment == null) {
                 currentFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.News.PAGER_NEWS).navigation();
