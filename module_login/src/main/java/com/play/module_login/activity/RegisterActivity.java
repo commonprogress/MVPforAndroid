@@ -78,6 +78,7 @@ public class RegisterActivity extends BaseActivity<LoginContract.View, LoginCont
     @Override
     public void backRegisterSuc(RegisterBean mRegisterBean) {
         SharePreUtils.setInteger("userid", mRegisterBean.getId());
+        SharePreUtils.setString("username", mRegisterBean.getUsername());
         ARouter.getInstance().build(RouterActivityPath.Main.PAGER_MAIN)
                 .navigation();
         BaseAppManager.getAppManager().finishActivity(LoginActivity.class);

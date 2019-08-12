@@ -1,18 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_centerInParent="true"
-    android:orientation="vertical"
-    tools:ignore="MissingDefaultResource,ResourceName">
+    android:fitsSystemWindows="false"
+    tools:ignore="ResourceName">
 
-    <TextView
-        android:id="@+id/tv_me"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:padding="10dp"
-        android:text="这是我的组件"
-        android:textSize="14sp" />
+    <com.play.library_base.view.ZoomScrollView
+        android:id="@+id/sv_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff5f5f5"
+        app:zoomMax="120dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@android:color/white" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/shape_circle_white" />
+
+                <com.play.library_base.view.CircleImageView
+                    android:id="@+id/civ_avatar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/shape_circle_white"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:ellipsize="end"
+                        android:maxLength="8"
+                        android:textColor="#ff333333"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:textColor="#ff999999"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <com.play.library_base.view.ItemView
+                android:id="@+id/iv_favorite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:itemTitle="我的收藏"
+                app:leftIcon="@mipmap/ic_me_favorite" />
+
+
+            <com.play.library_base.view.ItemView
+                android:id="@+id/iv_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:itemTitle="设置"
+                app:leftIcon="@mipmap/ic_me_setting" />
+
+            <com.play.library_base.view.ItemView
+                android:id="@+id/iv_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dividerVisible="false"
+                app:itemTitle="关于我们"
+                app:leftIcon="@mipmap/ic_me_about" />
+
+        </LinearLayout>
+
+    </com.play.library_base.view.ZoomScrollView>
+
+
+
+
 </RelativeLayout>
+

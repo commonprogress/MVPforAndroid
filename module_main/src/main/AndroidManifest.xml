@@ -4,7 +4,10 @@
 
     <application>
         <!--在自己组件中注册Activity-->
-        <activity android:name=".activity.MainActivity"/>
+        <!--主界面Activity-->
+        <activity android:name=".activity.MainActivity" />
+        <!--关于我Activity-->
+        <activity android:name=".activity.AboutActivity" />
     </application>
 
 </manifest>

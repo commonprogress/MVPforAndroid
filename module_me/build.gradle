@@ -8,6 +8,10 @@ android {
     }
     //统一资源前缀，规范资源引用
     resourcePrefix "me_"
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
 }
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')

@@ -5,9 +5,6 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
 
-import com.play.library_base.moduleinterface.IModuleMaster;
-import com.play.library_base.moduleinterface.ModuleMaster;
-import com.play.library_base.moduleinterface.ModuleNativeModule;
 import com.play.library_base.utils.Utils;
 
 public class BaseApplication extends Application {

@@ -29,4 +29,15 @@ public class RouterActivityPath {
         public static final String PAGER_REGISTER = LOGIN +"/Register";
     }
 
+
+    /**
+     * 登陆业务组件
+     */
+    public static class Setting {
+
+        private static final String SETTING = "/Setting";
+        /*关于界面*/
+        public static final String PAGER_SETTING_ABOUT = SETTING +"/about";
+    }
+
 }
