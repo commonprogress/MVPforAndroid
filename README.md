@@ -16,9 +16,7 @@
  10. .........
 
 
-第一个基础版本已经产生，稍后会抽时间去介绍：
-
-v1.0.0
+v1.1.0
 
 maven
 
@@ -52,7 +50,7 @@ gradle
 	
 	
 	dependencies {
-	        implementation 'com.github.Johnjson:MVPforAndroid:v1.0.0'
+	        implementation 'com.github.Johnjson:MVPforAndroid:v1.1.0'
 	}
 
 
