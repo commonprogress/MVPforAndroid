@@ -1,0 +1,25 @@
+apply from: "../module.build.gradle"
+android {
+    defaultConfig {
+        //如果是独立模块，则使用当前组件的包名
+        if (isBuildModule.toBoolean()) {
+            applicationId "com.play.module_login"
+        }
+    }
+    //统一资源前缀，规范资源引用
+    resourcePrefix "login_"
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation rootProject.ext.support["junit"]
+    //组件依赖基础库
+    api project(':library_net')
+    api project(':library_mvp')
+    api project(':library_base')
+    //组件中依赖阿里路由编译框架
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+}
